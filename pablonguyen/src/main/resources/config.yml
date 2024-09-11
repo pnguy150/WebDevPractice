@@ -1,0 +1,19 @@
+# Server Configuration
+server:
+  # Opt for default server so that healthCheck can be conducted on same port.
+  type: simple
+  # The context path of the admin servlets, including metrics and tasks.
+  applicationContextPath: /
+
+
+  connector:
+    # The type of protocol to follow: http or https.
+    type: http
+    # The TCP/IP port on which to listen for incoming connections.
+    port: 9000
+    # Host to bind to. Only bind to loopback
+    bindHost: 0.0.0.0
+  gzip:
+    enabled: true
+    bufferSize: 16KiB
+    syncFlush: true
